@@ -1,0 +1,20 @@
+/* Add some styles for the logout button */
+#logout-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    background-color: rgb(94, 94, 197);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 80px;
+    text-align: center;
+    
+    }
+    

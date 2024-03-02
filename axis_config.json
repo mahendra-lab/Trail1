@@ -1,0 +1,22 @@
+{
+    "azimuth_offset_value": 1,
+    "azimuth_velocity_value": 2,
+    "azimuth_acceleration_value":3,
+    "azimuth_deceleration_value": 4,
+    "azimuth_zero_position_value": 5,
+    "elevation_offset_value": 6,
+    "elevation_velocity_value": 7,
+    "elevation_acceleration_value": 8,
+    "elevation_deceleration_value": 9,
+    "elevation_zero_position_value": 10,
+    "polarization_offset_value": 11,
+    "polarization_velocity_value": 12,
+    "polarization_acceleration_value": 13,
+    "polarization_deceleration_value": 14,
+    "polarization_zero_position_value": 15,
+    "cross_level_offset_value": 16,
+    "cross_level_velocity_value": 17,
+    "cross_level_acceleration_value": 18,
+    "cross_level_deceleration_value": 19,
+    "cross_level_zero_position_value": 20
+  }

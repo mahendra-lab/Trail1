@@ -1,0 +1,93 @@
+/* Add some styles for the logout button */
+#logout-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    background-color: #4e73df;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 80px;
+    text-align: center;
+    
+    }
+    
+#layout,#layout2,#layout3{
+    background-color: #4e73df;
+    border-color: #4e73df;
+    border-top: white;
+    border-left: white;
+    color: #fff;
+    border-radius: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+}
+
+
+  /* POLARIZATION DROPDOWN DESIGN START */
+
+  dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    background-color:  #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 150px; /* Set a fixed width for the button */
+    text-align: left;
+    overflow: hidden;
+}
+
+.dropdown button::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 150px; /* Set the same width as the button */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-item.red {
+    color: red;
+}
+  /* POLARIZATION DROPDOWN DESIGN END */
+
+
+  

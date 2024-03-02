@@ -1,0 +1,20 @@
+{
+    "Azimuth": 45,
+    "Elevation": 35,
+    "Polarization":-22,
+    "cross_level": 66,
+    "bucstatus": 0,
+    "mhz_ref":1,
+    "fwd_power":61,
+    "digital_attn":21,
+    "buctemp":61,
+    "pstemp":99,
+    "latitudevalue":13.75,
+    "longitudevalue": 77.45,
+    "mode_value":0,
+    "btr_status_value":0,
+    "btr_value":0,
+    "drives_value":0,
+    "buc_value":0,
+    "mru_value":0
+  }

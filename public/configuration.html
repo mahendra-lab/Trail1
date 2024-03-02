@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="configuration_design.css">
+
+  <!--  <meta http-equiv="refresh" content="30"> -->
+
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#" style="padding-top: 24px"><img src="BEL_LOGO.png" style="width: 80px;height: 40px;margin-top: 10px;">
+                <div class="sidebar-brand-text mx-3"><span style="font-size: larger;">SOTM</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="monitor.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="control.html"><i class="fas fa-user"></i><span>Control&nbsp;</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="configuration.html"><i class="fas fa-table"></i><span>Configuration</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><img id="sidebarToggle" src="assets/img/4b.jpg" style="width: 25px;height: 25px;margin-left: -1px;">
+                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"></div>
+                        </form>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="me-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow"></li>
+                  <!--      </ul><img src="assets/img/br.jpg" style="height: 43px;width: 1px;margin-right: 30px;margin-left: 0px;"><button class="btn btn-primary" type="button" style="height: 40px;width: 80px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;">Logout</button> -->
+                </ul><img src="assets/img/br.jpg" style="height: 43px;width: 1px;margin-right: 100px;margin-left: 0px;"> <a id="logout-btn" href="/logout">Logout.</a>
+
+                    </div>
+                </nav>
+
+
+
+
+                <div class="container" style="margin-bottom: 15px;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card shadow mb-4" style="height: 200px;">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0" style="font-size: 20px;">M&C Configuration</h6>
+                                </div>
+                                <div style="height: 180px;">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-success">Parameters</th>
+                                                    <th class="text-success">Command Value</th>
+                                                    <th class="text-success">Options</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">IP Address :</td>
+                                                    <td><input  name="ipAddress" id="ipAddress"  style="width: 150px;"></td>
+                                                    <td><button id="ipAddress_save_button" onclick="validateIP()" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Subnet Mask:</td>
+                                                    <td><input name="subnet_mask_current_value1" id="subnet_mask_current_value1" style="width: 150px;" disabled></td>
+                                                    <td><button id="subnetmask_save_button" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>   
+                                                
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card shadow mb-4" style="height: 391.2px;">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0" style="font-size: 20px;">BTR Configuration</h6>
+                                </div>
+                                <div style="height: 380px;">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-success">Parameters</th>
+                                                    <th class="text-success">Command Value</th>
+                                                    <th class="text-success">Options</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Acquistion C/N :</td>
+                                                    <td><input type="number" name="acq_cn_current_value" id="acq_cn_current_value"  style="width: 150px;"></td>
+                                                    <td><button id="acq_cn_save_button" onclick="saveConfig('acq_cn_current_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Acquistion Bandwidth:</td>
+                                                    <td><input type="number" id="acq_bw_current_value" style="width: 150px;"></td>
+                                                    <td><button id="acq_bw_save_button" onclick="saveConfig('acq_bw_current_value')"  class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Tracking C/N :</td>
+                                                    <td><input type="number" id="tracking_cn_current_value"  style="width: 150px;"></td>
+                                                    <td><button id="tracking_cn_save_button" onclick="saveConfig('tracking_cn_current_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Tracking Bandwidth :</td>
+                                                    <td><input type="number"  id="tracking_bw_current_value"  style="width: 150px;"></td>
+                                                    <td><button id="tracking_bw_save_button" onclick="saveConfig('tracking_bw_current_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">BTR Frequency :</td>
+                                                    <td><input type="number" id="btr_freq_current_value" style="width: 150px;"></td>
+                                                    <td><button id="btr_freq_save_button" onclick="saveConfig('btr_freq_current_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card shadow mb-4" style="height: 161.2px;">
+                                        <div class="card-header d-flex justify-content-between align-items-center">
+                                            <h6 class="text-primary fw-bold m-0" style="font-size: 20px;">Satellite Information</h6>
+                                        </div>
+                                        <div style="height: 380px;">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-dark" style="font-weight: bold;">Longitude :</td>
+                                                            <td><input type="number" name="sat_longitude_current_value" id="sat_longitude_current_value" style="width: 150px;"></td>
+                                                            <td><button id="sat_longitude_save_button" onclick="saveConfig('sat_longitude_current_value')"  class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-dark" style="font-weight: bold;">Polarization:</td>
+                                                            <td>
+                                                               
+                                                            
+                                                        <!-- TESTING DROPBOX DATA BLOCK BEGINS-->
+                                                        <select id="layout" onchange="changeLayout()">
+                                                          <option value="Dropdown">Dropdown</option>
+                                                          <option value="horizontal">Horizontal</option>
+                                                          <option value="vertical">Vertical</option>
+                                                        </select>
+                                                        <!-- TESTING DROPBOX DATA BLOCK ENDS-->
+                                                            </td>
+                                                            <td>
+                                                           
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: -8px;">
+                                <div class="col">
+                                    <div class="card shadow mb-4" style="height: 213.2px;">
+                                        <div class="card-header d-flex justify-content-between align-items-center">
+                                            <h6 class="text-primary fw-bold m-0" style="font-size: 20px;">BUC Configuration</h6>
+                                        </div>
+                                        <div style="height: 373px;">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-dark" style="font-weight: bold;">Input Attn :</td>
+                                                            <td><input type="number" id="input_attn_current_value"  style="width: 150px;"></td>
+                                                            <td><button id="input_attn_save_button" onclick="saveConfig('input_attn_current_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-dark" style="font-weight: bold;">RF MUTE :</td>
+                                                            <td>
+                                            
+                                                            <select id="layout2" onchange="changeLayout2()">
+                                                                <option value="Dropdown2">Dropdown</option>
+                                                                <option value="Mute">Mute</option>
+                                                                <option value="Unmute">Unmute</option>
+                                                              </select>
+
+                                                            </td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr></tr>
+                                                        <tr>
+                                                            <td class="text-dark" style="font-weight: bold;">10 MHz Ref :</td>
+                                                            <td>
+                                                          
+                                                            <select id="layout3" onchange="changeLayout3()">
+                                                                <option value="Dropdown3">Dropdown</option>
+                                                                <option value="Internal">Internal</option>
+                                                                <option value="External">External</option>
+                                                              </select>
+                                                            </td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr></tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-6" style="height: 395px;margin-top: 0px;">
+                            <div class="card shadow mb-4" style="height: 391.2px;">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0" style="font-size: 20px;">AZIMUTH</h6>
+                                </div>
+                                <div style="height: 380px;">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-success">Parameters</th>
+                                                    <th class="text-success">Command Value</th>
+                                                    <th class="text-success">Current Value</th>
+                                                    <th class="text-success">Options</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Offset :</td>
+                                                    <td><input type="number" id="azimuth_offset_value" style="width: 150px;"></td>
+                                                    <td  id="azimuth_offset_current_value" style="text-align: center;"></td>
+                                                    <td><button id="azimuth_offset_save_button" onclick="saveConfig('azimuth_offset_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td  class="text-dark" style="font-weight: bold;">Velocity:</td>
+                                                    <td><input type="number" id="azimuth_velocity_value" style="width: 150px;"></td>
+                                                    <td id="azimuth_velocity_current_value" style="text-align: center;"></td>
+                                                    <td><button id="azimuth_velocity_save_button" onclick="saveConfig('azimuth_velocity_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Acceleration :</td>
+                                                    <td><input type="number" id="azimuth_acceleration_value" style="width: 150px;"></td>
+                                                    <td id="azimuth_acceleration_current_value" style="text-align: center;"></td>
+                                                    <td><button  id="azimuth_acceleration_save_button" onclick="saveConfig('azimuth_acceleration_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Deceleration :</td>
+                                                    <td><input type="number" id="azimuth_deceleration_value" style="width: 150px;"></td>
+                                                    <td id="azimuth_deceleration_current_value" style="text-align: center;"></td>
+                                                    <td><button id="azimuth_deceleration_save_button" onclick="saveConfig('azimuth_deceleration_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Zero Position :</td>
+                                                    <td><input type="number"  id="azimuth_zero_position_value"  style="width: 150px;"></td>
+                                                    <td id="azimuth_zero_position_current_value" style="text-align: center;"></td>
+                                                    <td><button id="azimuth_zero_position_save_button" onclick="saveConfig('azimuth_zero_position_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card shadow mb-4" style="height: 391.2px;">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0" style="font-size: 20px;">Elevation</h6>
+                                </div>
+                                <div style="height: 380px;">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-success">Parameters</th>
+                                                    <th class="text-success">Command Value</th>
+                                                    <th class="text-success">Current Value</th>
+                                                    <th class="text-success">Options</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Offset :</td>
+                                                    <td><input type="number" id="elevation_offset_value"  style="width: 150px;"></td>
+                                                    <td  id="elevation_offset_current_value" style="text-align: center;"></td>
+                                                    <td><button id="elevation_offset_save_button" onclick="saveConfig('elevation_offset_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Velocity:</td>
+                                                    <td><input type="number" id="elevation_velocity_value" style="width: 150px;"></td>
+                                                    <td id="elevation_velocity_current_value" style="text-align: center;"></td>
+                                                    <td><button id="elevation_velocity_save_button" onclick="saveConfig('elevation_velocity_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Acceleration :</td>
+                                                    <td><input type="number" id="elevation_acceleration_value" style="width: 150px;"></td>
+                                                    <td id="elevation_acceleration_current_value" style="text-align: center;"></td>
+                                                    <td><button  id="elevation_acceleration_save_button" onclick="saveConfig('elevation_acceleration_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Deceleration :</td>
+                                                    <td><input type="number" id="elevation_deceleration_value" style="width: 150px;"></td>
+                                                    <td id="elevation_deceleration_current_value" style="text-align: center;"></td>
+                                                    <td><button id="elevation_deceleration_save_button" onclick="saveConfig('elevation_deceleration_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Zero Position :</td>
+                                                    <td><input type="number"  id="elevation_zero_position_value" style="width: 150px;"></td>
+                                                    <td id="elevation_zero_position_current_value" style="text-align: center;"></td>
+                                                    <td><button id="elevation_zero_position_save_button" onclick="saveConfig('elevation_zero_position_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-bottom: 15px;">
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-6" style="margin-bottom: 0px;">
+                            <div class="card shadow mb-4" style="height: 391.2px;">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0" style="font-size: 20px;">Polarization</h6>
+                                </div>
+                                <div style="height: 380px;">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-success">Parameters</th>
+                                                    <th class="text-success">Command Value</th>
+                                                    <th class="text-success">Current Value</th>
+                                                    <th class="text-success">Options</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Offset :</td>
+                                                    <td><input type="number"  id="polarization_offset_value" style="width: 150px;"></td>
+                                                    <td id="polarization_offset_current_value" style="text-align: center;"></td>
+                                                    <td><button id="polarization_offset_save_button" onclick="saveConfig('polarization_offset_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Velocity:</td>
+                                                    <td><input type="number"  id="polarization_velocity_value" style="width: 150px;"></td>
+                                                    <td id="polarization_velocity_current_value" style="text-align: center;"></td>
+                                                    <td><button id="polarization_velocity_save_button" onclick="saveConfig('polarization_velocity_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Acceleration :</td>
+                                                    <td><input type="number"  id="polarization_acceleration_value" style="width: 150px;"></td>
+                                                    <td id="polarization_acceleration_current_value"style="text-align: center;"></td>
+                                                    <td><button id="polarization_acceleration_save_button" onclick="saveConfig('polarization_acceleration_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Deceleration :</td>
+                                                    <td><input type="number"  id="polarization_deceleration_value" style="width: 150px;"></td>
+                                                    <td id="polarization_deceleration_current_value" style="text-align: center;"></td>
+                                                    <td><button id="polarization_deceleration_save_button" onclick="saveConfig('polarization_deceleration_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Zero Position :</td>
+                                                    <td><input type="number" id="polarization_zero_position_value"  style="width: 150px;"></td>
+                                                    <td id="polarization_zero_position_current_value" style="text-align: center;"></td>
+                                                    <td><button id="polarization_zero_position_save_button" onclick="saveConfig('polarization_zero_position_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card shadow mb-4" style="height: 391.2px;">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0" style="font-size: 20px;">Cross-Level</h6>
+                                </div>
+                                <div style="height: 380px;">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-success">Parameters</th>
+                                                    <th class="text-success">Command Value</th>
+                                                    <th class="text-success">Current Value</th>
+                                                    <th class="text-success">Options</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Offset :</td>
+                                                    <td><input type="number" id="cross_level_offset_value" style="width: 150px;"></td>
+                                                    <td id="cross_level_offset_current_value" style="text-align: center;"></td>
+                                                    <td><button id="cross_level_save_button" onclick="saveConfig('cross_level_offset_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Velocity:</td>
+                                                    <td><input type="number" id="cross_level_velocity_value" style="width: 150px;"></td>
+                                                    <td id="cross_level_velocity_current_value" style="text-align: center;"></td>
+                                                    <td><button id="cross_level_velocity_save_button" onclick="saveConfig('cross_level_velocity_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Acceleration :</td>
+                                                    <td><input type="number" id="cross_level_acceleration_value" style="width: 150px;"></td>
+                                                    <td id="cross_level_acceleration_current_value" style="text-align: center;"></td>
+                                                    <td><button id="cross_level_acceleration_save_button" onclick="saveConfig('cross_level_acceleration_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Deceleration :</td>
+                                                    <td><input type="number" id="cross_level_deceleration_value"  style="width: 150px;"></td>
+                                                    <td id="cross_level_deceleration_current_value" style="text-align: center;"></td>
+                                                    <td><button id="cross_level_deceleration_save_button" onclick="saveConfig('cross_level_deceleration_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-dark" style="font-weight: bold;">Zero Position :</td>
+                                                    <td><input type="number" id="cross_level_zero_position_value" style="width: 150px;"></td>
+                                                    <td id="cross_level_zero_position_current_value" style="text-align: center;"></td>
+                                                    <td><button id="cross_level_zero_position_save_button" onclick="saveConfig('cross_level_zero_position_value')" class="btn btn-primary" type="button" style="border-top-left-radius: 20.6px;border-top-right-radius: 20.6px;border-bottom-right-radius: 20.6px;border-bottom-left-radius: 20.6px;width: 64.7px;">save</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span style="font-size: 14.8px;">Bharat Electronics Limited. All rights reserved.</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/apexchartsdata.js"></script>
+    <script defer src="configurationscript.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
